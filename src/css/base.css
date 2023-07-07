@@ -1,14 +1,5 @@
 /*~ ---------ЗМІННІ--------- */
 :root {
-  font-family: DM Sans, sans-serif;
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  color: #141414;
-  background-color: #ffffff;
-
-  /* font-synthesis: none;
-  text-rendering: optimizeLegibility; */
   --main-body-color: #141414;
   --accent-green-color: #a1c487;
   --secondary-green-color: #eaf7e5;

@@ -1,0 +1,29 @@
+.header {
+}
+.header-container {
+  display: flex;
+  padding: 17px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.header-nav {
+}
+.header-menu-list {
+  display: flex;
+  gap: 20px;
+  font-weight: 400;
+  line-height: 1.29;
+}
+.header-menu-item {
+}
+.logo-link {
+  display: block;
+  margin: 0 auto;
+}
+.logo-icon {
+  fill: #77ac63;
+}
+.shopping-btn {
+}
+.shopping-icon {
+}

@@ -46,6 +46,7 @@
   left: 50%;
   width: 100%;
   height: 100%;
+  z-index: 2;
   transform: translate(-50%, -50%) scale(1);
   background-color: var(--accent-green-color);
   transition: opacity var(--transition), visibility var(--transition);

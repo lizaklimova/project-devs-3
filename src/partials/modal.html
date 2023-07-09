@@ -1,0 +1,87 @@
+<!-- MODAL WINDOW -->
+<div class="modal">
+  <button type="button" class="close-modal-button" data-modal-close>
+    <svg class="close-modal-icon" width="28" height="28">
+      <use href="./img/close.svg#icon-close"></use>
+    </svg>
+  </button>
+  <p class="modal-title">Your Order</p>
+  <ul class="modal-pictures-list">
+    <div>
+      <li class="">
+        <input type="checkbox" />
+        <h2>Cabbage Basket</h2>
+        <p>Plant</p>
+        <picture>
+          <source
+            srcset="./img/desk_cabbage1x.jpg 1x, ./img/desk_cabbage2x.jgp 2x" />
+          <img src="./img/desk_cabbage1x.jpg" alt="Cabbage-Basket"
+        /></picture>
+      </li>
+    </div>
+    <div>
+      <li class="">
+        <input type="checkbox" />
+        <h2>Tomato Basket</h2>
+        <p>Plant</p>
+        <picture>
+          <source
+            srcset="../img/desk_tomato1x.jpg 1x, ../img/desk_tomato2x.jpg 2x"
+          />
+          <img src="../img/desk_tomato1x.jpg" alt="Tomato-Basket" />
+        </picture>
+      </li>
+    </div>
+    <div>
+      <li class="">
+        <input type="checkbox" />
+        <h2>Vegetables Basket</h2>
+        <p>Plant</p>
+        <picture>
+          <source
+            srcset="
+              ../img/desk_vegetables1x.jpg 1x,
+              ../img/desk_vegetables2x.jpg 2x
+            "
+          />
+          <img src="../img/desk_vegetablesx.jpg" alt="Vegetables-Basket" />
+        </picture>
+      </li>
+    </div>
+  </ul>
+  <form action="">
+    <div class="input-wrap">
+      <input
+        class="input-field"
+        type="text"
+        id="user-name"
+        placeholder="Enter full name..."
+      />
+    </div>
+    <div class="input-wrap">
+      <input
+        class="input-field"
+        type="text"
+        id="user-email"
+        placeholder="Enter email..."
+      />
+    </div>
+    <div class="input-wrap">
+      <input
+        class="input-field"
+        type="text"
+        id="user-card"
+        placeholder="Enter card..."
+      />
+    </div>
+    <div class="modal-comment-wrap">
+      <textarea
+        class="comment"
+        name="user-comment"
+        id="user-comment"
+        placeholder="Enter comments..."
+      ></textarea>
+    </div>
+    <button class="submit-modal-button" type="submit">Submit</button>
+  </form>
+</div>

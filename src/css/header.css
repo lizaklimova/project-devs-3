@@ -22,6 +22,7 @@
   align-items: center;
   font-size: 14px;
   line-height: 1.2;
+  letter-spacing: -0.04em;
   text-transform: uppercase;
 }
 
@@ -40,6 +41,12 @@
 
 /* ---MobilMenu--- */
 
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .mobile-menu {
   position: fixed;
   top: 50%;
@@ -48,7 +55,7 @@
   height: 100%;
   transform: translate(-50%, -50%) scale(1);
   background-color: var(--accent-green-color);
-  transition: opacity var(--transition), visibility var(--transition);
+  transition: opacity var(transition), visibility var(transition);
 }
 
 .mobile-menu-logo {
@@ -68,7 +75,7 @@
   fill: #77ac63;
 }
 
-.mobile-box-nav {
+.mobil-box-nav {
   text-align: center;
   padding-top: 124px;
 }
@@ -78,6 +85,7 @@
   color: var(--white-for-project);
   font-size: 14px;
   line-height: 1.29;
+  letter-spacing: -0.04em;
 }
 
 .menu-shopping-btn {

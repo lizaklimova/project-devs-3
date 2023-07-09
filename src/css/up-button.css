@@ -1,0 +1,38 @@
+.btn-up {
+  position: fixed;
+  background-color: var(--orange-button-color);
+  left: 20px;
+  bottom: 0px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition), background-color var(--transition);
+  width: 60px;
+  height: 50px;
+  opacity: 1;
+}
+
+.icon-btn-up {
+  fill: var(--accent-green-color);
+  transition: fill var(--transition);
+}
+
+/* .btn-up_hide {
+  display: none;
+}
+
+.btn-up_hiding {
+  opacity: 0;
+} */
+
+@media (hover: hover) and (pointer: fine) {
+  .btn-up:hover {
+    background-color: #ef6c00;
+  }
+  .btn-up:hover .icon-btn-up {
+    fill: #6c9b48;
+  }
+}

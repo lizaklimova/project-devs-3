@@ -1,38 +1,61 @@
 .btn-up {
   position: fixed;
-  background-color: var(--orange-button-color);
-  left: 20px;
-  bottom: 0px;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+  background-color: #a1c487;
+  right: 30px;
+  bottom: 30px;
+  border-radius: 50%;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: opacity var(--transition), background-color var(--transition);
-  width: 60px;
-  height: 50px;
+  filter: drop-shadow(3px 3px 50px #141414);
+  border: solid #eaf7e5;
+  border-width: 3px;
+  width: 80px;
+  height: 80px;
   opacity: 1;
 }
 
 .icon-btn-up {
-  fill: var(--accent-green-color);
+  fill: #eaf7e5;
   transition: fill var(--transition);
 }
 
-/* .btn-up_hide {
+.btn-up_hide {
   display: none;
 }
-
 .btn-up_hiding {
   opacity: 0;
-} */
+}
 
 @media (hover: hover) and (pointer: fine) {
   .btn-up:hover {
-    background-color: #ef6c00;
+    background-color: rgba(252, 138, 17, 0.7);
+    filter: drop-shadow(5px 5px 30px #141414);
+    transition: background-color var(--transition);
   }
   .btn-up:hover .icon-btn-up {
-    fill: #6c9b48;
+    fill: #eaf7e5;
   }
+}
+
+@keyframes hvr-pulse {
+  25% {
+    transform: scale(1.1);
+  }
+  75% {
+    transform: scale(0.9);
+  }
+}
+.hvr-pulse {
+  transform: perspective(1px) translateZ(0);
+}
+.hvr-pulse:hover,
+.hvr-pulse:focus,
+.hvr-pulse:active {
+  animation-name: hvr-pulse;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
 }

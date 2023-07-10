@@ -1,14 +1,3 @@
-:root {
-  --main-body-color: #141414;
-  --accent-green-color: #a1c487;
-  --secondary-green-color: #eaf7e5;
-  --orange-button-color: #fc8a11;
-  --background-color: #faf3e7;
-  --hero-organic-color: #f9f7f4;
-  --white-for-project: #ffffff;
-  /** Transition */
-  --transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 .backdrop {
   position: fixed;
   top: 0;
@@ -16,8 +5,9 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(161, 196, 135, 0.9);
-  /* transition: opacity var(--transition), visibility var(--transition); */
+  transition: opacity var(--transition), visibility var(--transition);
 }
+
 .modal {
   position: absolute;
   top: 50%;
@@ -27,13 +17,15 @@
   background-color: var(--white-for-project);
   border-radius: 20px;
   width: 335px;
-  height: 700px;
+  min-height: 903px;
   padding: 22px 20px 20px 20px;
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.01),
     0px 0px 18px 0px rgba(0, 0, 0, 0.02), 0px 0px 36px 0px rgba(0, 0, 0, 0.03),
     0px 0px 71px 0px rgba(0, 0, 0, 0.03), 0px 0px 131px 0px rgba(0, 0, 0, 0.04),
     0px 0px 223px 0px rgba(0, 0, 0, 0.05);
+  overflow: scroll;
 }
+
 .modal-heading {
   color: var(--main-body-color);
   text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
@@ -45,17 +37,23 @@
   text-align-last: left;
   margin-bottom: 40px;
 }
+
 .modal-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: absolute;
   right: 20px;
   top: 22px;
   width: 24px;
   height: 24px;
   background-color: transparent;
+  padding: 0;
 }
 
-.modal-close-btn:focus,
-.modal-close-btn:active {
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon,
+.modal-close-btn:active .modal-close-icon {
   fill: var(--orange-button-color);
   transition: fill var(--transition);
 }
@@ -64,17 +62,13 @@
   fill: var(--main-body-color);
 }
 
-.modal-vegetables-list {
-}
-
 .modal-vegetables-item {
   position: relative;
-  width: calc((100% -24px) / 2);
+  width: 100%;
   height: 119px;
   background-color: var(--background-color);
   border-radius: 20px;
   padding: 14px 14px 8px 20px;
-  box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.5);
 }
 
 .modal-vegetables-item:not(:last-child) {
@@ -97,6 +91,7 @@
   position: absolute;
   top: 14px;
   right: 14px;
+  cursor: pointer;
 }
 
 .modal-checkbox:checked + span {
@@ -112,6 +107,7 @@
   text-align: left;
   margin-bottom: 2px;
 }
+
 .modal-vegetables-second-text {
   color: var(--main-body-color);
   font-style: normal;
@@ -125,38 +121,183 @@
   width: 16px;
   height: 16px;
 }
+
 .modal-picture img {
   position: absolute;
   top: 33px;
   right: 30px;
   filter: drop-shadow(3px 0px 3px rgba(20, 20, 20, 0.5));
 }
-.modal-form {
+
+.modal-form-wrap:not(:last-child) {
+  margin-bottom: 14px;
 }
-.modal-form-wrap {
-}
-.modal-form-label {
-}
+
 .modal-input {
+  width: 100%;
+  height: 46px;
+  border-radius: 100px;
+  background-color: transparent;
+  outline: transparent;
+  border: 1px solid rgba(20, 20, 20, 0.3);
+  padding-left: 24px;
+  padding-right: 30px;
+  transition: border-color var(--transition);
 }
+
+.modal-input:focus,
+.modal-textarea:focus {
+  border-color: rgba(252, 138, 17, 0.5);
+}
+
 .modal-textarea {
+  width: 100%;
+  height: 132px;
+  background-color: transparent;
+  outline: transparent;
+  border-radius: 20px;
+  border: 1px solid rgba(20, 20, 20, 0.3);
+  resize: none;
+  padding-left: 24px;
+  padding-right: 30px;
+  padding-top: 14px;
+  margin-bottom: 20px;
 }
+
+.modal-input::placeholder,
+.modal-textarea::placeholder {
+  color: rgba(20, 20, 20, 0.5);
+  font-family: DM Sans;
+  font-size: 1.29;
+  font-weight: 400;
+  line-height: 18px;
+}
+
 .modal-submit-btn {
+  color: var(--white-for-project);
+  width: 92px;
+  min-height: 42px;
+  font-size: 14px;
+  line-height: 1.29;
+  text-transform: capitalize;
+  border-radius: 100px;
+  background-color: #fc8a11;
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background-color: var(--accent-green-color);
+  filter: drop-shadow(3px 0px 3px rgba(20, 20, 20, 0.5));
+  transition: background-color var(--transition), filter var(--transition);
+}
+
+.modal-girl-img {
+  display: none;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) rotate(-360deg);
 }
 
 @media screen and (min-width: 375px) {
 }
 
 @media screen and (min-width: 768px) {
+  .modal {
+    width: 704px;
+    min-height: 853px;
+    padding: 20px 20px 40px 40px;
+    overflow: hidden;
+  }
+
+  .modal-close-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .modal-heading {
+    font-size: 40px;
+    line-height: 1.1;
+    margin-top: 20px;
+  }
+
+  .modal-vegetables-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+  }
+
+  .modal-vegetables-item {
+    width: 200px;
+    height: 250px;
+  }
+
+  .modal-vegetables-item:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .modal-vegetables-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .modal-picture img {
+    width: 172px;
+    height: 142px;
+    position: static;
+    margin-top: 6px;
+  }
+
+  .modal-vegetables-main-text {
+    font-size: 24px;
+    line-height: 1.17;
+    margin-top: 26px;
+  }
+
+  .modal-input {
+    width: 360px;
+    height: 48px;
+  }
+
+  .modal-textarea {
+    width: 360px;
+    height: 145px;
+  }
+
+  .modal-submit-btn {
+    width: 114px;
+    min-height: 48px;
+  }
+
+  .modal-girl-img {
+    display: block;
+    position: absolute;
+    right: -154px;
+    bottom: 0;
+  }
 }
 
 @media screen and (min-width: 1280px) {
-  .modal-close-btn:hover {
-    fill: var(--accent-green-color);
+  .modal {
+    width: 891px;
+    min-height: 911px;
+    overflow: scroll;
+  }
+
+  .modal-vegetables-list {
+    gap: 20px;
   }
 
   .modal-vegetables-item {
     position: relative;
+    width: 257px;
+    height: 308px;
+  }
+
+  .modal-girl-img {
+    right: 0;
+    bottom: 0;
   }
 
   .modal-vegetables-item:before {
@@ -169,12 +310,18 @@
     bottom: 0;
     left: 0;
     animation-duration: 1s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
     transition-property: top, right, bottom, left;
   }
 
+  .modal-picture img {
+    width: 243px;
+    height: 200px;
+  }
+
   .modal-vegetables-item:hover:before,
-  .modal-vegetables-item:focus:before,
-  .modal-vegetables-item:active:before {
+  .modal-vegetables-item:focus:before {
     animation-name: rippleOut;
   }
 

@@ -3,13 +3,13 @@
     <nav class="header-nav">
       <ul class="header-menu-list">
         <li class="header-menu-item header-work">
-          <a href="#work">How It Works</a>
+          <a class="header-menu-link" href="#work">How It Works</a>
         </li>
         <li class="header-menu-item header-vegetables">
-          <a href="#vegetables">Vegetables</a>
+          <a class="header-menu-link" href="#vegetables">Vegetables</a>
         </li>
         <li class="header-menu-item header-contacts">
-          <a href="#contacts">Contacts</a>
+          <a class="header-menu-link" href="#contacts">Contacts</a>
         </li>
       </ul>
     </nav>
@@ -48,12 +48,23 @@
     <div class="mobile-box-nav">
       <nav class="mobile-menu-nav">
         <ul class="mobile-menu-list">
-          <li class="mobile-menu-item"><a href="#work">How It Works</a></li>
-          <li class="mobile-menu-item"><a href="#vegetables">Vegetables</a></li>
-          <li class="mobile-menu-item"><a href="#contacts">Contacts</a></li>
+          <li data-menu-close-first class="mobile-menu-item">
+            <a href="#work">How It Works</a>
+          </li>
+          <li data-menu-close-second class="mobile-menu-item">
+            <a href="#vegetables">Vegetables</a>
+          </li>
+          <li data-menu-close-third class="mobile-menu-item">
+            <a href="#contacts">Contacts</a>
+          </li>
         </ul>
       </nav>
-      <button class="menu-shopping-btn" data-modal-open type="submit">
+      <button
+        class="menu-shopping-btn"
+        data-modal-open-first
+        data-menu-close-fourth
+        type="submit"
+      >
         <svg class="menu-shopping-icon" width="20" height="20">
           <use href="./img/icons.svg#icon-shopping-cart"></use>
         </svg>

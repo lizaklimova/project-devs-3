@@ -15,8 +15,8 @@
     />
     <!-- *STYLES -->
     
-    <script type="module" crossorigin src="/project-devs-3/assets/index-19abd791.js"></script>
-    <link rel="stylesheet" href="/project-devs-3/assets/index-12ffc251.css">
+    <script type="module" crossorigin src="/project-devs-3/assets/index-4388ad09.js"></script>
+    <link rel="stylesheet" href="/project-devs-3/assets/index-07d705b8.css">
   </head>
   <body>
     <!-- ~OLEKSII -->
@@ -143,7 +143,9 @@
       Fresh, high-quality vegetables in expertly curated vegetable baskets
       delivered to you.
     </p>
-    <button data-modal-open type="submit" class="hero-button">shop now</button>
+    <button type="submit" class="hero-button" data-modal-open-first>
+      shop now
+    </button>
     <img
       class="hero-image"
       srcset="/project-devs-3/assets/hero-girl-98f19f85.png 1x, /project-devs-3/assets/hero-girl-2x-e4f7cb10.png 2x"
@@ -462,7 +464,7 @@
       <button
         class="vegatables-modal-open-button"
         type="button"
-        data-modal-open
+        data-modal-open-second
       >
         <svg class="vegatables-order-icon" width="14" height="14">
           <use href="/project-devs-3/assets/icons-6243f561.svg#icon-shopping-arrow"></use>
@@ -474,8 +476,8 @@
 </section>
 
       <!-- ~ALICE -->
-      <div class="backdrop" data-modal>
-  <div class="modal">
+      <div class="backdrop is-hidden is-visible" data-modal>
+  <div class="modal is-open">
     <p class="modal-heading">your order</p>
     <button type="button" class="modal-close-btn" data-modal-close="">
       <svg class="modal-close-icon" width="24" height="24">
@@ -628,8 +630,7 @@
           name="user-comments"
           class="modal-textarea"
           placeholder="Enter comments..."
-        >
-        </textarea>
+        ></textarea>
       </div>
       <button class="modal-submit-btn" type="submit">Submit</button>
       <img

@@ -15,8 +15,8 @@
     />
     <!-- *STYLES -->
     
-    <script type="module" crossorigin src="/project-devs-3/assets/index-4388ad09.js"></script>
-    <link rel="stylesheet" href="/project-devs-3/assets/index-07d705b8.css">
+    <script type="module" crossorigin src="/project-devs-3/assets/index-bff82f25.js"></script>
+    <link rel="stylesheet" href="/project-devs-3/assets/index-5f72bff7.css">
   </head>
   <body>
     <!-- ~OLEKSII -->
@@ -25,13 +25,13 @@
     <nav class="header-nav">
       <ul class="header-menu-list">
         <li class="header-menu-item header-work">
-          <a href="#work">How It Works</a>
+          <a class="header-menu-link" href="#work">How It Works</a>
         </li>
         <li class="header-menu-item header-vegetables">
-          <a href="#vegetables">Vegetables</a>
+          <a class="header-menu-link" href="#vegetables">Vegetables</a>
         </li>
         <li class="header-menu-item header-contacts">
-          <a href="#contacts">Contacts</a>
+          <a class="header-menu-link" href="#contacts">Contacts</a>
         </li>
       </ul>
     </nav>
@@ -70,12 +70,23 @@
     <div class="mobile-box-nav">
       <nav class="mobile-menu-nav">
         <ul class="mobile-menu-list">
-          <li class="mobile-menu-item"><a href="#work">How It Works</a></li>
-          <li class="mobile-menu-item"><a href="#vegetables">Vegetables</a></li>
-          <li class="mobile-menu-item"><a href="#contacts">Contacts</a></li>
+          <li data-menu-close-first class="mobile-menu-item">
+            <a href="#work">How It Works</a>
+          </li>
+          <li data-menu-close-second class="mobile-menu-item">
+            <a href="#vegetables">Vegetables</a>
+          </li>
+          <li data-menu-close-third class="mobile-menu-item">
+            <a href="#contacts">Contacts</a>
+          </li>
         </ul>
       </nav>
-      <button class="menu-shopping-btn" data-modal-open type="submit">
+      <button
+        class="menu-shopping-btn"
+        data-modal-open-first
+        data-menu-close-fourth
+        type="submit"
+      >
         <svg class="menu-shopping-icon" width="20" height="20">
           <use href="/project-devs-3/assets/icons-6243f561.svg#icon-shopping-cart"></use>
         </svg>
@@ -276,7 +287,7 @@
 </div>
 
       <!-- ~OLENA -->
-      <section class="vegatables-section">
+      <section class="vegatables-section" id="vegetables">
   <div class="container vegatables-container">
     <h2 class="vegatables-title">organic vegetables</h2>
     <p class="vegatables-description">
@@ -650,7 +661,7 @@
 
     </main>
     <!-- ~OLEKSANDR -->
-    <footer class="footer">
+    <footer class="footer" id="contacts">
   <div class="container footer-container">
     <img
       srcset="./src/img/footer-img.png 1x, ./src/img/footer-img-2x.png 2x"

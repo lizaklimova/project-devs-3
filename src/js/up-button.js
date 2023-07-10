@@ -1,5 +1,5 @@
 const btnUp = {
-  el: document.querySelector('.btn-up'),
+  el: null,
   scrolling: false,
   show() {
     if (
@@ -25,35 +25,33 @@ const btnUp = {
       }, 300);
     }
   },
+  handleScroll() {
+    const scrollY = window.scrollY || document.documentElement.scrollTop;
+    if (this.scrolling && scrollY > 0) {
+      return;
+    }
+    this.scrolling = false;
+    if (scrollY > 400) {
+      this.show();
+    } else {
+      this.hide();
+    }
+  },
   addEventListener() {
-    // при прокрутке окна (window)
-    window.addEventListener('scroll', () => {
-      const scrollY = window.scrollY || document.documentElement.scrollTop;
-      if (this.scrolling && scrollY > 0) {
-        return;
-      }
-      this.scrolling = false;
-      // если пользователь прокрутил страницу более чем на 200px
-      if (scrollY > 400) {
-        // сделаем кнопку .btn-up видимой
-        this.show();
-      } else {
-        // иначе скроем кнопку .btn-up
-        this.hide();
-      }
-    });
-    // при нажатии на кнопку .btn-up
-    document.querySelector('.btn-up').onclick = () => {
+    this.el = document.querySelector('.btn-up');
+    window.addEventListener('scroll', this.handleScroll.bind(this));
+    this.el.addEventListener('click', () => {
       this.scrolling = true;
       this.hide();
-      // переместиться в верхнюю часть страницы
       window.scrollTo({
         top: 0,
         left: 0,
         behavior: 'smooth',
       });
-    };
+    });
   },
 };
 
-btnUp.addEventListener();
+document.addEventListener('DOMContentLoaded', () => {
+  btnUp.addEventListener();
+});

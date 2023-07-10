@@ -139,8 +139,67 @@
 }
 
 @media screen and (min-width: 1280px) {
+  .header-menu-item {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .header-menu-item:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 51%;
+    right: 51%;
+    bottom: 0;
+    background-color: #77ac63;
+    height: 4px;
+    transition-property: left, right;
+    transition-duration: 5s;
+    transition-timing-function: ease-out;
+  }
+
+  .header-menu-item:hover .header-menu-item:before,
+  .header-menu-item:focus .header-menu-item:before,
+  .header-menu-item:active .header-menu-item:before {
+    left: 0;
+    right: 0;
+  }
+
+  .logo-link:hover .logo-icon {
+    animation-name: header-pulse;
+    animation-duration: 3s;
+    animation-timing-function: linear;
+    animation-iteration-count: 3;
+  }
+
+  .shopping-icon {
+    /* fill: #77ac63; */
+    animation-name: header-shopping;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+
   .shopping-icon {
     width: 24px;
     height: 24px;
+  }
+
+  @keyframes header-pulse {
+    25% {
+      transform: rotate(-15deg);
+    }
+    75% {
+      transform: rotate(15deg);
+    }
+  }
+  @keyframes header-shopping {
+    25% {
+      transform: translateX(5px);
+    }
+    75% {
+      transform: translateX(-15px);
+    }
   }
 }

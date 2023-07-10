@@ -1,0 +1,210 @@
+@media screen and (min-width: 375px) {
+  .container {
+    max-width: 375px;
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  .call-section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .call-title {
+    margin-bottom: 20px;
+
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 1.17;
+    text-transform: uppercase;
+    text-align: center;
+
+    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+  }
+
+  .call-text {
+    margin-bottom: 40px;
+
+    text-align: center;
+    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+  }
+
+  .call-input {
+    margin-bottom: 40px;
+    padding-left: 24px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    width: 335px;
+    height: 48px;
+    border-radius: 100px;
+
+    opacity: 0.30000001192092896;
+    border: 1px solid rgba(20, 20, 20, 1)
+  }
+
+  .call-input::placeholder {
+    color: #C1BDBD;
+  }
+
+  .call-input-container {
+    position: relative;
+  }
+
+  .call-button {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 105px;
+    height: 48px;
+    padding: 15px 35px;
+    border-radius: 100px;
+    background-color: var(--orange-button-color);
+    color: var(--white-for-project);
+  }
+
+  .call-img-container {
+    width: 335px;
+    height: 388px;
+
+    border-radius: 40px;
+    background: #FAF3E7;
+    background-image: url(../img/call-girl-br.png), radial-gradient(circle at 30px 20px, rgba(161, 196, 135, 0.4) 3px, transparent 0);
+    background-size: 385px, 40px 40px;
+    background-repeat: no-repeat, repeat;
+    background-position: bottom;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .call-img-container {
+      background-image: url(../img/call-girl-br-2x.png), radial-gradient(circle at 30px 20px, rgba(161, 196, 135, 0.4) 3px, transparent 0);
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 744px;
+  }
+
+  .call-container {
+    max-width: 524px;
+    margin: auto;
+  }
+
+  .call-section {
+    padding-top: 100px;
+    padding-bottom: 173px;
+  }
+
+  .call-title {
+    margin-bottom: 20px;
+
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  .call-text {
+    margin-bottom: 40px;
+
+    font-size: 18px;
+    line-height: 1.3;
+
+    text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.10);
+  }
+
+  .call-input-container {
+    display: inline-block;
+    justify-content: center;
+  }
+
+  .call-form-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .call-input {
+    margin-bottom: 80px;
+
+    width: 350px;
+    height: 48px;
+  }
+
+  .call-img-container {
+    width: 704px;
+    height: 463px;
+
+    border-radius: 80px;
+    background: #FAF3E7;
+    background-image: url(../img/call-girl-br.png), radial-gradient(circle at 30px 20px, rgba(161, 196, 135, 0.4) 3px, transparent 0);
+    background-size: 480px, 40px 40px;
+    background-repeat: no-repeat, repeat;
+    background-position: bottom;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .call-img-container {
+      background-image: url(../img/call-girl-br-2x.png), radial-gradient(circle at 30px 20px, rgba(161, 196, 135, 0.4) 3px, transparent 0);
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1256px;
+  }
+
+  .call-section {
+    display: flex;
+    padding-top: 124px;
+    padding-bottom: 124px;
+  }
+
+  .call-container {
+    margin-right: 77px;
+    margin-top: 98px;
+    margin-bottom: 98px;
+  }
+
+  .call-title {
+    margin-bottom: 40px;
+
+    font-size: 42px;
+    font-weight: 500;
+    text-align: start;
+  }
+
+  .call-text {
+    margin-bottom: 80px;
+    text-align: start;
+  }
+
+  .call-form-container {
+    display: flex;
+    justify-content: start;
+  }
+
+  .call-img-container {
+    width: 525px;
+    height: 536px;
+
+    background: #FAF3E7;
+    background-image: url(../img/call-girl-br.png), radial-gradient(circle at 30px 20px, rgba(161, 196, 135, 0.4) 3px, transparent 0);
+    background-size: 515px, 40px 40px;
+    background-repeat: no-repeat, repeat;
+    background-position: bottom;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+    .call-img-container {
+      background-image: url(../img/call-girl-br-2x.png), radial-gradient(circle at 30px 20px, rgba(161, 196, 135, 0.4) 3px, transparent 0);
+    }
+  }
+}

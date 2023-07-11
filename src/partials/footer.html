@@ -1,85 +1,124 @@
 <footer class="footer" id="contacts">
   <div class="container footer-container">
-    <img
-      srcset="./src/img/footer-img.png 1x, ./src/img/footer-img-2x.png 2x"
-      src="./src/img/footer-img.png"
-      alt="broccoli"
-      width="335"
-      height="172"
-    />
-    <svg class="footer-icon" width="16" height="16">
-      <use href="./src/img/icons.svg#icon-logo"></use>
-    </svg>
-    <a class="footer-logo" href="./index.html">veggieboost</a>
-    <nav class="footer-navigation">
-      <ul class="footer-navigation-list">
-        <li class="footer-navigation-item">
-          <a href="./index.html" id="#work">How It Works</a>
-        </li>
-        <li class="footer-navigation-item">
-          <a href="./index.html" id="#vegetables">Vegetables</a>
-        </li>
-        <li class="footer-navigation-item">
-          <a href="./index.html" id="#contacts">Contacts</a>
-        </li>
-      </ul>
-    </nav>
-    <address class="footer-contacts">
-      <ul class="footer-social-list">
-        <li class="footer-social-item">
-          <a
-            href=""
-            class="footer-social-link"
-            aria-label="facebook"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="footer-social-icons" width="24" height="24">
-              <use href="./src/img/icons.svg#icon-facebook"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a
-            href=""
-            class="footer-social-link"
-            aria-label="instagram"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="footer-social-icons" width="24" height="24">
-              <use href="./src/img/icons.svg#icon-instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="footer-social-item">
-          <a
-            href=""
-            class="footer-social-link"
-            aria-label="youtube"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <svg class="footer-social-icons" width="24" height="24">
-              <use href="./img/icons.svg#icon-youtube"></use>
-            </svg>
-          </a>
-        </li>
-      </ul>
-      <ul class="footer-contacts-list">
-        <li class="footer-contacts-item">
-          <a class="footer-tel-link" href="tel:+380684439426"
-            >+380 (68) 443-94-26</a
-          >
-        </li>
-        <li class="footer-contacts-item">
-          <a class="footer-adress-link" href="">
-            1678 S. Pioneer Road <br />
-            Salt Lake City<br />
-            UT 84104<br />
-          </a>
-        </li>
-      </ul>
-    </address>
+    <div class="footer-control">
+      <div>
+        <picture>
+          <source
+            media="(min-width: 768px)"
+            srcset="
+              ./img/footer-broccoli-tab-desk.png   1x,
+              ./img/footer-broccoli-tab-desk2x.png 2x
+            "
+          />
+          <source
+            media="(max-width: 767px)"
+            srcset="
+              ./img/footer-broccoli-mob.png   1x,
+              ./img/footer-broccoli-mob2x.png 2x
+            "
+          />
+          <img
+            src="./img/footer-broccoli-mob.png"
+            alt="broccoli"
+            width="335"
+            height="172"
+            class="footer-broccoli-img"
+          />
+        </picture>
+
+        <a class="footer-logo" href="./index.html">
+          <svg class="footer-icon" width="16" height="16">
+            <use href="./img/icons.svg#icon-logo"></use>
+          </svg>
+          veggieboost
+        </a>
+      </div>
+      <div>
+        <nav class="footer-navigation">
+          <ul class="footer-navigation-list">
+            <li class="footer-navigation-item">
+              <a class="footer-navigation-link" href="./index.html" id="#work"
+                >How It Works</a
+              >
+            </li>
+            <li class="footer-navigation-item">
+              <a
+                class="footer-navigation-link"
+                href="./index.html"
+                id="#vegetables"
+                >Vegetables</a
+              >
+            </li>
+            <li class="footer-navigation-item">
+              <a
+                class="footer-navigation-link"
+                href="./index.html"
+                id="#contacts"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div>
+      <address class="footer-contacts">
+        <ul class="footer-social-list">
+          <li class="footer-social-item">
+            <a
+              href=""
+              class="footer-social-link"
+              aria-label="facebook"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="footer-social-icons" width="24" height="24">
+                <use href="./img/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a
+              href=""
+              class="footer-social-link"
+              aria-label="instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="footer-social-icons" width="24" height="24">
+                <use href="./img/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a
+              href=""
+              class="footer-social-link"
+              aria-label="youtube"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg class="footer-social-icons" width="24" height="24">
+                <use href="./img/icons.svg#icon-youtube"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <ul class="footer-contacts-list">
+          <li class="footer-contacts-item">
+            <a class="footer-tel-link" href="tel:+380684439426"
+              >+380 (68) 443-94-26</a
+            >
+          </li>
+          <li class="footer-contacts-item">
+            <a class="footer-adress-link" href="">
+              1678 S. Pioneer Road <br />
+              Salt Lake City<br />
+              UT 84104<br />
+            </a>
+          </li>
+        </ul>
+      </address>
+    </div>
   </div>
 </footer>

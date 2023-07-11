@@ -29,6 +29,11 @@
   fill: #77ac63;
 }
 
+.shopping-btn:is(:hover, :focus) .shopping-icon {
+  fill: var(--accent-green-color);
+  transition: fill var(--transition);
+}
+
 .burger-btn {
   background-color: transparent;
   padding: 0;
@@ -139,6 +144,7 @@
 }
 
 @media screen and (min-width: 1280px) {
+  /* Border transition */
   .header-menu-item {
     display: inline-block;
     vertical-align: middle;
@@ -169,41 +175,15 @@
     right: 0;
   }
 
-  .header-menu-item {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .header-menu-item:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 51%;
-    right: 51%;
-    bottom: 0;
-    background-color: #77ac63;
-    height: 4px;
-    transition-property: left, right;
-    transition-duration: 5s;
-    transition-timing-function: ease-out;
-  }
-
-  .header-menu-item:hover .header-menu-item:before,
-  .header-menu-item:focus .header-menu-item:before,
-  .header-menu-item:active .header-menu-item:before {
-    left: 0;
-    right: 0;
-  }
-
+  /* Logo rotate animation */
   .logo-link:hover .logo-icon {
     animation-name: header-pulse;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: 3;
   }
-
+  /* Shopping cart animation */
   .shopping-icon {
-    /* fill: #77ac63; */
     animation-name: header-shopping;
     animation-duration: 5s;
     animation-timing-function: linear;

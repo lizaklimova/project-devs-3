@@ -4,19 +4,20 @@
   z-index: 3;
   width: 100vw;
   height: 100vh;
+  overflow-y: scroll;
   background-color: rgba(161, 196, 135, 0.9);
   transition: opacity var(--transition), visibility var(--transition);
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) rotate(-360deg);
+  transform: translate(-50%, -50%) scale(0) rotate(-360deg);
 }
 
 .modal {
   position: absolute;
-  top: 50%;
+  top: 3%;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(0);
+  transform: translate(-50%, 0%) scale(1) rotate(0);
   transition: transform var(--transition);
   background-color: var(--white-for-project);
   border-radius: 20px;
@@ -27,7 +28,7 @@
     0px 0px 18px 0px rgba(0, 0, 0, 0.02), 0px 0px 36px 0px rgba(0, 0, 0, 0.03),
     0px 0px 71px 0px rgba(0, 0, 0, 0.03), 0px 0px 131px 0px rgba(0, 0, 0, 0.04),
     0px 0px 223px 0px rgba(0, 0, 0, 0.05);
-  overflow: scroll;
+  overflow-y: scroll;
 }
 
 .modal-heading {
@@ -96,6 +97,10 @@
   top: 14px;
   right: 14px;
   cursor: pointer;
+}
+
+.modal-checkbox:focus + span {
+  border: 2px solid var(--accent-green-color);
 }
 
 .modal-checkbox:checked + span {
@@ -299,7 +304,7 @@
 
   .modal-girl-img {
     right: 0;
-    bottom: 0;
+    bottom: -3%;
   }
 
   .modal-vegetables-main-text {

@@ -53,13 +53,13 @@
   height: 24px;
   background-color: transparent;
   padding: 0;
+  transition: fill var(--transition);
 }
 
 .modal-close-btn:hover .modal-close-icon,
 .modal-close-btn:focus .modal-close-icon,
 .modal-close-btn:active .modal-close-icon {
   fill: var(--orange-button-color);
-  transition: fill var(--transition);
 }
 
 .modal-close-icon {
@@ -187,13 +187,13 @@
   text-transform: capitalize;
   border-radius: 100px;
   background-color: #fc8a11;
+  transition: background-color var(--transition), filter var(--transition);
 }
 
 .modal-submit-btn:hover,
 .modal-submit-btn:focus {
   background-color: var(--accent-green-color);
   filter: drop-shadow(3px 0px 3px rgba(20, 20, 20, 0.5));
-  transition: background-color var(--transition), filter var(--transition);
 }
 
 .modal-girl-img {

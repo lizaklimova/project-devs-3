@@ -383,13 +383,14 @@
   }
 
   .hero-image {
-    position: relative;
     object-fit: cover;
     overflow: hidden;
+    position: relative;
   }
 
   .hero-image-wrap::before {
     position: absolute;
+
     content: '';
     display: flex;
     justify-content: center;

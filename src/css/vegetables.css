@@ -1,27 +1,19 @@
-.vegatables-container {
-  margin-bottom: 80px;
-}
-
 .vegatables-title {
   text-align: center;
   text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
   font-size: 24px;
   font-weight: 500;
   line-height: 1.17;
-  letter-spacing: -0.96px;
   text-transform: uppercase;
   margin-bottom: 14px;
 }
 
 .vegatables-description {
-  display: flex;
-  width: 335px;
-  flex-direction: column;
-  justify-content: center;
+  max-width: 335px;
+  height: auto;
   text-align: center;
   text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
   line-height: 1.28;
-  letter-spacing: -0.56px;
   margin-bottom: 40px;
 }
 
@@ -29,16 +21,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .vegatables-card {
   display: flex;
   flex-direction: column;
   width: 335px;
-  height: 443px;
   flex-shrink: 0;
   background: #eaf7e5;
-  margin-bottom: 20px;
+  padding: 40px 25px 20px 20px;
   border-radius: 5%;
 }
 
@@ -46,18 +39,15 @@
   font-size: 24px;
   font-weight: 700;
   line-height: 1.17;
-  letter-spacing: -0.96px;
-  margin-top: 40px;
-  margin-left: 20px;
+  text-align: left;
+  margin-bottom: 8px;
 }
 
 .vegatables-local-description {
   font-size: 14px;
   font-weight: 400;
   line-height: 1.28;
-  letter-spacing: -0.28px;
-  margin-top: 8px;
-  margin-left: 20px;
+  text-align: left;
 }
 
 .vegatables-images {
@@ -84,9 +74,6 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.28;
-  letter-spacing: -0.56px;
-  margin-left: 20px;
-  margin-bottom: 20px;
 }
 
 .vegatables-btn {
@@ -96,16 +83,24 @@
 
 .vegatables-modal-open-button {
   width: 80px;
-  height: 80px;
+  min-height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  gap: 4px;
   border-radius: 50%;
   background-color: #fc8a11;
+  margin-top: 20px;
+  transition: background-color var(--transition);
+}
+
+.vegatables-modal-open-button:focus {
+  background-color: var(--accent-green-color);
 }
 
 .vegatables-order-icon {
   fill: #fff;
+  transform: translateY(5px);
 }
 
 .vegatables-order {
@@ -115,7 +110,6 @@
   font-size: 14px;
   font-weight: 500;
   line-height: 1.28;
-  letter-spacing: -0.56px;
   text-transform: uppercase;
   transform: rotate(-14deg);
 }
@@ -128,23 +122,38 @@
   .vegatables-title {
     font-size: 28px;
     line-height: 1.14;
-    letter-spacing: -1.12px;
   }
 
   .vegatables-description {
-    display: block;
-    margin: 0 auto;
-    width: 562px;
-    height: 72px;
+    max-width: 562px;
     font-size: 18px;
     line-height: 1.33;
-    letter-spacing: -0.72px;
     margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vegatables-card {
+    width: calc((100% - 20px) / 2);
+    padding: 64px 20px 24px 24px;
   }
 
   .vegatables-list {
-    width: calc((100%-20px) / 2);
-    column-gap: 20px;
+    flex-direction: unset;
+  }
+
+  .vegatables-modal-open-button {
+    margin-top: 40px;
+    width: 114px;
+    min-height: 114px;
+  }
+
+  .vegatables-order {
+    font-size: 18px;
+  }
+
+  .vegatables-order-icon {
+    transform: translate(7px, 10px);
   }
 }
 
@@ -152,15 +161,23 @@
   .vegatables-title {
     font-size: 40px;
     line-height: 1.1;
-    letter-spacing: -1.6px;
   }
 
   .vegatables-list {
-    width: calc((100%-48px) / 3);
-    column-gap: 24px;
+    gap: 24px;
+  }
+
+  .vegatables-card {
+    padding-right: 30px;
+    padding-left: 30px;
+    width: calc((100% - 48px) / 3);
   }
 
   .added-card {
     display: flex;
+  }
+  .vegatables-modal-open-button:hover,
+  .vegatables-modal-open-button:focus {
+    background-color: var(--accent-green-color);
   }
 }

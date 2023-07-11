@@ -28,10 +28,12 @@
 .logo-icon {
   fill: #77ac63;
 }
+.shopping-btn {
+  transition: fill var(--transition);
+}
 
 .shopping-btn:is(:hover, :focus) .shopping-icon {
   fill: var(--accent-green-color);
-  transition: fill var(--transition);
 }
 
 .burger-btn {

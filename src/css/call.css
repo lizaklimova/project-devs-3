@@ -27,6 +27,7 @@
   border-radius: 100px;
   opacity: 0.30000001192092896;
   border: 1px solid rgba(20, 20, 20, 1);
+  transition: border-color var(--transition);
 }
 
 .call-input:focus {
@@ -51,13 +52,13 @@
   border-radius: 100px;
   background-color: var(--orange-button-color);
   color: var(--white-for-project);
+  transition: background-color var(--transition), filter var(--transition);
 }
 
 .call-button:hover,
 .call-button:focus {
   background-color: var(--accent-green-color);
   filter: drop-shadow(3px 0px 3px rgba(20, 20, 20, 0.5));
-  transition: background-color var(--transition), filter var(--transition);
 }
 
 .call-img-container {

@@ -28,6 +28,7 @@
 .logo-icon {
   fill: #77ac63;
 }
+
 .shopping-btn {
   transition: fill var(--transition);
 }

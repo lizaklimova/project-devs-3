@@ -45,7 +45,7 @@
             type="checkbox"
             name="modal-order"
           />
-          <span>
+          <span class="modal-checkbox-span">
             <svg class="modal-check-icon" width="6" height="6">
               <use href="./img/icons.svg#icon-pick"></use>
             </svg>
@@ -145,6 +145,7 @@
             type="name"
             name="user-name"
             placeholder="Enter full name..."
+            required
           />
         </label>
       </div>
@@ -165,6 +166,9 @@
             type="text"
             name="user-card"
             placeholder="Enter card.."
+            required
+            pattern="[0-9]{16}"
+            title="Please enter a 16-digit card number"
           />
         </label>
       </div>

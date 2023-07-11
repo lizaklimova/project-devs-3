@@ -4,18 +4,12 @@
   background-color: var(--accent-green-color);
 }
 
-.hero-container {}
-
 .hero-reviewer-list {
   display: flex;
   align-items: center;
   margin-top: 48px;
   margin-bottom: 14px;
 }
-
-.hero-reviewer-item {}
-
-.hero-reviewer-wrap {}
 
 .hero-reviewer-item:not(:first-child) {
   margin-left: -14px;
@@ -69,8 +63,6 @@
   text-transform: uppercase;
   margin-bottom: 14px;
 }
-
-.hero-reviewer-image {}
 
 .hero-reviewer-text {
   color: var(--main-body-color);
@@ -137,6 +129,11 @@
   margin-bottom: 8px;
 }
 
+.hero-button:focus {
+  color: var(--accent-green-color);
+  background-color: var(--secondary-green-color);
+}
+
 .hero-image-wrap {
   max-width: 279px;
   margin: 0 auto;
@@ -151,8 +148,6 @@
   max-width: 180px;
   margin-left: auto;
 }
-
-.hero-hashtag-item {}
 
 .hero-hashtag-btn {
   color: var(--white-for-project);
@@ -169,10 +164,12 @@
   border-color: var(--white-for-project);
 }
 
-@media screen and (min-width: 375px) {}
+.hero-hashtag-btn:focus {
+  color: var(--main-body-color);
+  background-color: var(--white-for-project);
+}
 
 @media screen and (min-width: 768px) {
-
   .hero-reviewer-list {
     margin-top: 113px;
     margin-bottom: 18px;
@@ -295,8 +292,7 @@
     transition: var(--transition);
   }
 
-  .hero-button:hover,
-  .hero-button:focus {
+  .hero-button:hover {
     color: var(--accent-green-color);
     background-color: var(--secondary-green-color);
     border-radius: 50px;
@@ -321,8 +317,7 @@
     transition: background-color var(--transition), color var(--transition);
   }
 
-  .hero-hashtag-btn:hover,
-  .hero-hashtag-btn:focus {
+  .hero-hashtag-btn:hover {
     color: var(--main-body-color);
     background-color: var(--white-for-project);
   }

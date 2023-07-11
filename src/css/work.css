@@ -230,9 +230,9 @@
   } */
 
   picture .work-img-broccoli {
-    filter: drop-shadow(15px 15px 10px #a1c487);
+    filter: drop-shadow(15px 15px 10px rgba(20, 20, 20, 0.5));
     animation-name: work-broccoli;
-    animation-duration: 3s;
+    animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
   }
@@ -242,8 +242,12 @@
       transform: scale(1);
     }
 
-    100% {
+    50% {
       transform: scale(0.9);
+    }
+
+    100% {
+      transform: scale(1);
     }
   }
 

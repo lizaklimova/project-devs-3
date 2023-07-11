@@ -8,6 +8,10 @@
   transition: opacity var(--transition), visibility var(--transition);
 }
 
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) rotate(-360deg);
+}
+
 .modal {
   position: absolute;
   top: 50%;
@@ -196,10 +200,6 @@
   display: none;
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) rotate(-360deg);
-}
-
 @media screen and (min-width: 375px) {
   .modal {
     width: 335px;
@@ -211,7 +211,6 @@
     width: 704px;
     min-height: 853px;
     padding: 20px 20px 40px 40px;
-    overflow: hidden;
   }
 
   .modal-close-btn {
@@ -284,7 +283,8 @@
   .modal {
     width: 891px;
     min-height: 911px;
-    overflow: scroll;
+    height: 100%;
+    /* overflow: scroll; */
   }
 
   .modal-vegetables-list {

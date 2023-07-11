@@ -1,5 +1,6 @@
 .btn-up {
   position: fixed;
+  z-index: 999;
   background-color: #a1c487;
   right: 30px;
   bottom: 30px;

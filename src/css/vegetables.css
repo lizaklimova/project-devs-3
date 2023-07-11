@@ -176,6 +176,7 @@
   .added-card {
     display: flex;
   }
+
   .vegatables-modal-open-button:hover,
   .vegatables-modal-open-button:focus {
     background-color: var(--accent-green-color);

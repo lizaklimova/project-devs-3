@@ -368,7 +368,7 @@
 
   .hero-hashtag-btn {
     padding: 12px 32px;
-    transition: var(--transition);
+    transition: background-color var(--transition), color var(--transition);
   }
 
   .hero-hashtag-btn:hover,

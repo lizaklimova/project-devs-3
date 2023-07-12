@@ -120,7 +120,7 @@
 
   picture .footer-broccoli-img {
     filter: drop-shadow(15px 15px 10px rgba(20, 20, 20, 0.5));
-    animation-name: footer-broccoli;
+    animation-name: broccoli;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -156,35 +156,11 @@
     right: 0;
   }
 
-  @keyframes footer-broccoli {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(0.9);
-    }
-
-    100% {
-      transform: scale(1);
-    }
-  }
-
   .footer-logo:hover .footer-icon {
-    animation-name: footer-pulse;
+    animation-name: pulse;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: 3;
-  }
-
-  @keyframes footer-pulse {
-    25% {
-      transform: rotate(-15deg);
-    }
-
-    75% {
-      transform: rotate(15deg);
-    }
   }
 
   .footer-navigation-item {
@@ -216,5 +192,4 @@
   .footer-navigation-link:active:before {
     right: 0;
   }
-
 }

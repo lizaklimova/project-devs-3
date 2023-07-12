@@ -1,4 +1,4 @@
-/* ----MobilFirst */
+/* ----Mobile First */
 .header-nav {
   display: none;
 }
@@ -46,18 +46,37 @@
   fill: #77ac63;
 }
 
-/* ---MobilMenu--- */
+/* ---Mobile Menu--- */
 
 .mobile-menu {
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 0;
+  left: -100%;
   width: 100%;
   height: 100%;
-  z-index: 2;
-  transform: translate(-50%, -50%) scale(1);
+  z-index: 9999;
+  opacity: 0;
   background-color: var(--accent-green-color);
-  transition: opacity var(--transition), visibility var(--transition);
+  transition: left 500ms ease-out, opacity 500ms ease-out;
+}
+
+.mobile-menu.is-hidden {
+  left: -100%;
+  opacity: 0;
+}
+
+.mobile-menu.is-visible {
+  left: 0;
+  opacity: 1;
+}
+
+.mobile-menu.is-closing {
+  transition: all 1s ease-out;
+}
+
+.mobile-menu.is-closing.is-hidden {
+  left: -100%;
+  opacity: 0;
 }
 
 .mobile-menu-logo {
@@ -185,7 +204,7 @@
 
   /* Logo rotate animation */
   .logo-link:hover .logo-icon {
-    animation-name: header-pulse;
+    animation-name: pulse;
     animation-duration: 3s;
     animation-timing-function: linear;
     animation-iteration-count: 3;
@@ -203,25 +222,5 @@
   .shopping-icon {
     width: 24px;
     height: 24px;
-  }
-
-  @keyframes header-pulse {
-    25% {
-      transform: rotate(-15deg);
-    }
-
-    75% {
-      transform: rotate(15deg);
-    }
-  }
-
-  @keyframes header-shopping {
-    25% {
-      transform: translateX(5px);
-    }
-
-    75% {
-      transform: translateX(-15px);
-    }
   }
 }

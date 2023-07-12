@@ -14,7 +14,16 @@
   refs.closeMenuBtnSecond.addEventListener('click', toggleMenu);
   refs.closeMenuBtnThird.addEventListener('click', toggleMenu);
   refs.closeMenuBtnFourth.addEventListener('click', toggleMenu);
+
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
+    refs.menu.classList.toggle('is-visible');
+
+    if (refs.menu.classList.contains('is-hidden')) {
+      refs.menu.classList.add('is-closing');
+      setTimeout(() => {
+        refs.menu.classList.remove('is-closing');
+      }, 500);
+    }
   }
 })();

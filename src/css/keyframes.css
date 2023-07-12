@@ -1,0 +1,104 @@
+/* Vegetables + Modal */
+@keyframes rippleOut {
+  100% {
+    top: -12px;
+    right: -12px;
+    bottom: -12px;
+    left: -12px;
+    opacity: 0;
+  }
+}
+/* Work + Footer */
+@keyframes broccoli {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Work-girl */
+@keyframes work-girl {
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+
+  15% {
+    transform: translateX(-30px) rotate(-6deg);
+  }
+
+  30% {
+    transform: translateX(15px) rotate(6deg);
+  }
+
+  45% {
+    transform: translateX(-15px) rotate(-3.6deg);
+  }
+
+  60% {
+    transform: translateX(9px) rotate(2.4deg);
+  }
+
+  75% {
+    transform: translateX(-6px) rotate(-1.2deg);
+  }
+}
+
+/* Header + Footer Pulse */
+@keyframes pulse {
+  25% {
+    transform: rotate(-15deg);
+  }
+
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+/* Header shopping */
+@keyframes header-shopping {
+  25% {
+    transform: translateX(5px);
+  }
+
+  75% {
+    transform: translateX(-15px);
+  }
+}
+/* Vegetables */
+@keyframes vegets {
+  25% {
+    transform: translateY(-30px);
+  }
+
+  75% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+/* Vegetables - shadow */
+@keyframes shadow {
+  25% {
+    width: 250px;
+    opacity: 0.07;
+    transform: translateY(-10px);
+  }
+
+  75% {
+    width: 180px;
+    opacity: 0.25;
+    transform: translateY(3px);
+  }
+}

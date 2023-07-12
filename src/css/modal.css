@@ -5,29 +5,34 @@
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
-  background-color: rgba(161, 196, 135, 0.9);
-  transition: opacity var(--transition), visibility var(--transition);
+  background-color: rgba(20, 20, 20, 0.7);
+  transition: opacity 250 ease, visibility 1s ease;
+  background-image: linear-gradient(
+    180deg,
+    rgba(46, 47, 66, 0.7),
+    rgba(46, 47, 66, 0.7)
+  );
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0) rotate(-360deg);
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .modal {
   position: absolute;
   top: 3%;
   left: 50%;
-  transform: translate(-50%, 0%) scale(1) rotate(0);
-  transition: transform var(--transition);
+  transform: translate(-50%, 0%) scale(1);
+  transition: transform 500ms ease;
   background-color: var(--white-for-project);
   border-radius: 20px;
   width: 280px;
   min-height: 903px;
   padding: 22px 20px 20px 20px;
-  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.01),
-    0px 0px 18px 0px rgba(0, 0, 0, 0.02), 0px 0px 36px 0px rgba(0, 0, 0, 0.03),
-    0px 0px 71px 0px rgba(0, 0, 0, 0.03), 0px 0px 131px 0px rgba(0, 0, 0, 0.04),
-    0px 0px 223px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1),
+    0px 0px 18px 0px rgba(0, 0, 0, 0.1), 0px 0px 36px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 71px 0px rgba(0, 0, 0, 0.1), 0px 0px 131px 0px rgba(0, 0, 0, 0.2),
+    0px 0px 223px 0px rgba(0, 0, 0, 0.2);
   overflow-y: scroll;
 }
 
@@ -151,12 +156,12 @@
   border: 1px solid rgba(20, 20, 20, 0.3);
   padding-left: 24px;
   padding-right: 30px;
-  transition: border-color var(--transition);
+  transition: border var(--transition);
 }
 
 .modal-input:focus,
 .modal-textarea:focus {
-  border-color: rgba(252, 138, 17, 0.5);
+  border: 3px solid rgba(252, 138, 17, 0.5);
 }
 
 .modal-textarea {
@@ -277,6 +282,7 @@
   }
 
   .modal-girl-img {
+    filter: drop-shadow(3px 3px 10px var(--main-body-color));
     display: block;
     position: absolute;
     right: -154px;
@@ -288,8 +294,6 @@
   .modal {
     width: 891px;
     min-height: 911px;
-    height: 100%;
-    /* overflow: scroll; */
   }
 
   .modal-vegetables-list {
@@ -304,7 +308,7 @@
 
   .modal-girl-img {
     right: 0;
-    bottom: -3%;
+    bottom: 0;
   }
 
   .modal-vegetables-main-text {
@@ -334,15 +338,5 @@
   .modal-vegetables-item:hover:before,
   .modal-vegetables-item:focus:before {
     animation-name: rippleOut;
-  }
-
-  @keyframes rippleOut {
-    100% {
-      top: -12px;
-      right: -12px;
-      bottom: -12px;
-      left: -12px;
-      opacity: 0;
-    }
   }
 }

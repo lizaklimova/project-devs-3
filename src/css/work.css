@@ -203,7 +203,6 @@
   .work-steps-list {
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
     gap: 35px;
   }
   .work-steps-item {
@@ -225,30 +224,12 @@
     max-width: 349px;
   }
 
-  /* picture:hover img {
-    filter: drop-shadow(5px 0 5px #a1c487);
-  } */
-
   picture .work-img-broccoli {
     filter: drop-shadow(15px 15px 10px rgba(20, 20, 20, 0.5));
-    animation-name: work-broccoli;
+    animation-name: broccoli;
     animation-duration: 5s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-  }
-
-  @keyframes work-broccoli {
-    0% {
-      transform: scale(1);
-    }
-
-    50% {
-      transform: scale(0.9);
-    }
-
-    100% {
-      transform: scale(1);
-    }
   }
 
   picture .work-img-girl {
@@ -257,33 +238,5 @@
     animation-duration: 5s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
-  }
-
-  @keyframes work-girl {
-    0%,
-    100% {
-      transform: translateX(0%);
-      transform-origin: 50% 50%;
-    }
-
-    15% {
-      transform: translateX(-30px) rotate(-6deg);
-    }
-
-    30% {
-      transform: translateX(15px) rotate(6deg);
-    }
-
-    45% {
-      transform: translateX(-15px) rotate(-3.6deg);
-    }
-
-    60% {
-      transform: translateX(9px) rotate(2.4deg);
-    }
-
-    75% {
-      transform: translateX(-6px) rotate(-1.2deg);
-    }
   }
 }

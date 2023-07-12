@@ -160,9 +160,11 @@
     0% {
       transform: scale(1);
     }
+
     50% {
       transform: scale(0.9);
     }
+
     100% {
       transform: scale(1);
     }
@@ -179,8 +181,40 @@
     25% {
       transform: rotate(-15deg);
     }
+
     75% {
       transform: rotate(15deg);
     }
   }
+
+  .footer-navigation-item {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-navigation-link:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    background-color: var(--orange-button-color);
+    height: 4px;
+    border-radius: 3px;
+    transition-property: right;
+    transition-duration: 1s;
+    transition-timing-function: ease-out;
+  }
+
+  .footer-navigation-link:hover:before,
+  .footer-navigation-link:focus:before,
+  .footer-navigation-link:active:before {
+    right: 0;
+  }
+
 }

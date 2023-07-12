@@ -82,6 +82,14 @@
 }
 
 .vegatables-modal-open-button {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.28;
+  text-transform: uppercase;
+  transform: rotate(-14deg);
   width: 80px;
   min-height: 80px;
   display: flex;
@@ -100,18 +108,7 @@
 
 .vegatables-order-icon {
   fill: #fff;
-  transform: translateY(5px);
-}
-
-.vegatables-order {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.28;
-  text-transform: uppercase;
-  transform: rotate(-14deg);
+  transform: rotate(14deg);
 }
 
 .added-card {
@@ -149,17 +146,14 @@
   }
 
   .vegatables-modal-open-button {
+    font-size: 18px;
     margin-top: 40px;
     width: 114px;
     min-height: 114px;
   }
 
-  .vegatables-order {
-    font-size: 18px;
-  }
-
   .vegatables-order-icon {
-    transform: translate(7px, 10px);
+    transform: translate(3px, 3px);
   }
 }
 

@@ -235,6 +235,11 @@
     padding: 10px 20px;
     border-radius: 1000px;
   }
+
+  .hero-picture img {
+    width: 466px;
+    height: 380px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
@@ -320,5 +325,10 @@
   .hero-hashtag-btn:hover {
     color: var(--main-body-color);
     background-color: var(--white-for-project);
+  }
+
+  .hero-picture img {
+    width: 515px;
+    height: 423px;
   }
 }

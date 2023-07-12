@@ -152,7 +152,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-
   /* Border transition */
   .header-menu-item {
     display: inline-block;
@@ -205,7 +204,6 @@
     width: 24px;
     height: 24px;
   }
-
 
   @keyframes header-pulse {
     25% {

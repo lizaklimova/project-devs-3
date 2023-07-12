@@ -1,4 +1,4 @@
-.vegatables-title {
+.vegetables-title {
   text-align: center;
   text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
   font-size: 24px;
@@ -8,7 +8,7 @@
   margin-bottom: 14px;
 }
 
-.vegatables-description {
+.vegetables-description {
   max-width: 335px;
   height: auto;
   text-align: center;
@@ -17,7 +17,7 @@
   margin-bottom: 40px;
 }
 
-.vegatables-list {
+.vegetables-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -25,17 +25,23 @@
   gap: 20px;
 }
 
-.vegatables-card {
+.vegetables-card {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   width: 100%;
   flex-shrink: 0;
-  background: #eaf7e5;
+  background-color: var(--secondary-green-color);
   padding: 40px 25px 20px 20px;
   border-radius: 5%;
 }
 
-.vegatables-subtitle {
+.vegetables-heading {
+  display: flex;
+  flex-direction: column;
+}
+
+.vegetables-subtitle {
   font-size: 24px;
   font-weight: 700;
   line-height: 1.17;
@@ -43,49 +49,48 @@
   margin-bottom: 8px;
 }
 
-.vegatables-local-description {
-  font-size: 14px;
-  font-weight: 400;
+.vegetables-local-description {
   line-height: 1.28;
   text-align: left;
 }
 
-.vegatables-images {
-  width: 100%;
-  height: 249px;
+.vegetables-images {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+
+.vegetables-view {
   margin-top: 36px;
-  margin-bottom: 22px;
 }
 
 .vegetables-shadow {
   display: block;
-  margin: 0 auto;
-  background-color: #141414;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5px;
+  background-color: var(--main-body-color);
   opacity: 0.10000000149011612;
   filter: blur(13.591408729553223px);
   border-radius: 50%;
 }
 
-.vegatables-price {
-  font-size: 14px;
+.vegetables-price {
   font-weight: 500;
   line-height: 1.28;
+  margin-top: 22px;
 }
 
-.vegatables-btn {
+.vegetables-btn {
   display: flex;
   justify-content: center;
 }
 
-.vegatables-modal-open-button {
-  color: #fff;
+.vegetables-modal-open-button {
+  color: var(--white-for-project);
   text-align: center;
   text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
-  font-size: 14px;
   font-weight: 500;
   line-height: 1.28;
   text-transform: uppercase;
@@ -97,17 +102,17 @@
   justify-content: space-around;
   gap: 4px;
   border-radius: 50%;
-  background-color: #fc8a11;
+  background-color: var(--orange-button-color);
   margin-top: 20px;
   transition: background-color var(--transition);
 }
 
-.vegatables-modal-open-button:focus {
+.vegetables-modal-open-button:focus {
   background-color: var(--accent-green-color);
 }
 
-.vegatables-order-icon {
-  fill: #fff;
+.vegetables-order-icon {
+  fill: var(--white-for-project);
   transform: rotate(14deg);
 }
 
@@ -116,18 +121,18 @@
 }
 
 @media screen and (min-width: 375px) {
-  .vegatables-card {
+  .vegetables-card {
     width: 335px;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .vegatables-title {
+  .vegetables-title {
     font-size: 28px;
     line-height: 1.14;
   }
 
-  .vegatables-description {
+  .vegetables-description {
     max-width: 562px;
     font-size: 18px;
     line-height: 1.33;
@@ -136,56 +141,176 @@
     margin-right: auto;
   }
 
-  .vegatables-card {
+  .vegetables-card {
     width: calc((100% - 20px) / 2);
     padding: 64px 20px 24px 24px;
   }
 
-  .vegatables-list {
+  .vegetables-list {
     flex-direction: unset;
   }
 
-  .vegatables-modal-open-button {
+  .vegetables-price {
+    margin-top: 32px;
+  }
+
+  .vegetables-modal-open-button {
     font-size: 18px;
     margin-top: 40px;
     width: 114px;
     min-height: 114px;
+    justify-content: center;
+    column-gap: 10px;
   }
 
-  .vegatables-order-icon {
-    transform: translate(3px, 3px);
+  .vegetables-shadow {
+    margin-top: 5px;
+  }
+
+  /*~ Pictures width and height */
+
+  .carrot {
+    width: 321px;
+    height: 245px;
+  }
+
+  .brussel {
+    width: 266px;
+    height: 266px;
+  }
+
+  .tomato {
+    width: 297px;
+    height: 188px;
+    margin-bottom: 55px;
+  }
+
+  .eggplant {
+    width: 222px;
+    height: 221px;
+  }
+
+  .potatoes {
+    width: 339px;
+    height: 218px;
+  }
+
+  .leek {
+    width: 308px;
+    height: 215px;
+  }
+
+  .mushrooms {
+    width: 353px;
+    height: 199px;
+  }
+
+  .corn {
+    width: 286px;
+    height: 219px;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .vegatables-title {
+  .vegetables-title {
     font-size: 40px;
     line-height: 1.1;
   }
 
-  .vegatables-list {
+  .vegetables-list {
     gap: 24px;
   }
 
-  .vegatables-card {
+  .vegetables-card {
     padding-right: 30px;
     padding-left: 30px;
     width: calc((100% - 48px) / 3);
+    transition: border var(--transition);
   }
 
-  .added-card {
-    display: flex;
+  .vegetables-subtitle {
+    transition: scale 5s ease-in-out 1s;
   }
 
-  .vegatables-modal-open-button:hover {
-    background-color: var(--accent-green-color);
+  .vegetables-card:hover {
+    border: 3px solid rgba(20, 20, 20, 0.5);
   }
 
-  .vegatables-modal-open-button {
+  /*~ Vegetables animation */
+
+  .vegetables-card:hover .vegetables-view {
+    animation-name: vegets;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  /*~ Vegetables` shadow animation */
+
+  .vegetables-card:hover .vegetables-shadow {
+    animation-name: shadow;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+
+  /*~ Vegetables` subtitle scale */
+
+  .vegetables-card:hover .vegetables-subtitle {
+    transform: scale(1.3);
+    padding-left: 35px;
+  }
+
+  /*~ Vegetables` price animation */
+
+  .vegetables-price {
     position: relative;
   }
 
-  .vegatables-modal-open-button::before {
+  .vegetables-price::after {
+    content: '';
+    display: block;
+    background-color: transparent;
+    position: absolute;
+    width: 110px;
+    height: 30px;
+    border-radius: 100px;
+    z-index: -1;
+    opacity: 0;
+    border: 1px solid var(--main-body-color);
+  }
+
+  .vegetables-card:hover .vegetables-price::after {
+    opacity: 1;
+    top: -7px;
+    left: 25px;
+    background-color: rgba(252, 138, 17, 0.5);
+  }
+
+  .vegetables-card:hover .vegetables-price {
+    padding-left: 40px;
+    font-weight: 500;
+    transform: scale(1.3);
+    transition: transform var(--transition);
+  }
+
+  .added-card {
+    display: inline-flex;
+  }
+
+  .vegetables-modal-open-button:hover {
+    background-color: var(--accent-green-color);
+  }
+
+  /*~ Vegetables` button animation */
+
+  .vegetables-modal-open-button {
+    position: relative;
+  }
+
+  .vegetables-modal-open-button::before {
     content: '';
     position: absolute;
     border: rgba(161, 196, 135, 0.9) solid 3px;
@@ -199,23 +324,12 @@
     transition-property: top, right, bottom, left;
   }
 
-  .vegatables-modal-open-button:hover:before,
-  .vegatables-modal-open-button:focus:before {
-    animation-name: rippleOutveg;
+  .vegetables-modal-open-button:hover:before,
+  .vegetables-modal-open-button:focus:before {
+    animation-name: rippleOut;
   }
 
-  .vegatables-modal-open-button:not(:hover)::before {
+  .vegetables-modal-open-button:not(:hover)::before {
     border-color: transparent;
   }
-
-  @keyframes rippleOutveg {
-    100% {
-      top: -12px;
-      right: -12px;
-      bottom: -12px;
-      left: -12px;
-      opacity: 0;
-    }
-  }
-
 }

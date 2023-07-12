@@ -1,6 +1,14 @@
 .hero-section {
   padding-top: 20px;
   padding-bottom: 50px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../img/backgrounds.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-color: var(--accent-green-color);
 }
 
@@ -295,6 +303,22 @@
     width: 132px;
     height: 132px;
     transition: var(--transition);
+    position: relative;
+  }
+
+  .hero-button::before {
+    content: '';
+    position: absolute;
+    border: var(--white-for-project) solid 3px;
+    border-radius: 50%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation-name: rippleOut;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    transition-property: top, right, bottom, left;
   }
 
   .hero-button:hover {
@@ -328,7 +352,8 @@
   }
 
   .hero-picture img {
-    width: 515px;
+    transform: translateY(-10%);
+    width: 624px;
     height: 423px;
   }
 }

@@ -1,14 +1,6 @@
 .hero-section {
   padding-top: 20px;
   padding-bottom: 50px;
-  background-image: linear-gradient(
-      180deg,
-      rgba(46, 47, 66, 0.7),
-      rgba(46, 47, 66, 0.7)
-    ),
-    url(../img/backgrounds.webp);
-  background-size: cover;
-  background-repeat: no-repeat;
   background-color: var(--accent-green-color);
 }
 

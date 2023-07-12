@@ -105,10 +105,12 @@
     padding-top: 15px;
     padding-bottom: 15px;
   }
+
   .header-nav {
     display: block;
     margin-right: auto;
   }
+
   .header-menu-list {
     display: flex;
     gap: 20px;
@@ -124,12 +126,15 @@
   .item-active:focus {
     color: var(--accent-green-color);
   }
+
   .logo-link {
     margin-right: auto;
   }
+
   .logo-icon {
     fill: #77ac63;
   }
+
   .shopping-btn {
     background-color: transparent;
     display: block;
@@ -147,6 +152,7 @@
 }
 
 @media screen and (min-width: 1280px) {
+
   /* Border transition */
   .header-menu-item {
     display: inline-block;
@@ -185,6 +191,7 @@
     animation-timing-function: linear;
     animation-iteration-count: 3;
   }
+
   /* Shopping cart animation */
   .shopping-icon {
     animation-name: header-shopping;
@@ -199,18 +206,22 @@
     height: 24px;
   }
 
+
   @keyframes header-pulse {
     25% {
       transform: rotate(-15deg);
     }
+
     75% {
       transform: rotate(15deg);
     }
   }
+
   @keyframes header-shopping {
     25% {
       transform: translateX(5px);
     }
+
     75% {
       transform: translateX(-15px);
     }

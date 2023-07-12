@@ -135,27 +135,9 @@
 }
 
 .hero-image-wrap {
-  margin-bottom: 50px;
-  margin-left: 41px;
-}
-
-.hero-image {
-  position: relative;
-  top: 27px;
-  left: -5px;
-  border-bottom-left-radius: 38px;
-  border-bottom-right-radius: 100px;
-}
-
-.hero-image-wrap::before {
-  position: absolute;
-  content: '';
-  display: block;
-  width: 195px;
-  height: 294px;
-  background-color: var(--white-for-project);
-  border-radius: 500px;
-  transform: rotate(-104.004deg);
+  max-width: 279px;
+  margin: 0 auto;
+  margin-bottom: 16px;
 }
 
 .hero-hashtag-list {
@@ -214,17 +196,6 @@
 
   .hero-reviewer-text-part {
     font-size: 18px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .hero-reviewer-text {
-    font-size: 10px;
-    line-height: 1.2;
-  }
-
-  .hero-reviewer-text-part {
-    font-size: 18px;
     line-height: 1.33;
   }
 
@@ -240,24 +211,17 @@
     padding: 23px 10px;
     height: 114px;
     width: 114px;
+    margin-bottom: 16px;
   }
 
   .hero-image-wrap {
-    margin-left: 160px;
+    max-width: 468px;
+    margin-bottom: 8px;
   }
 
   .hero-image {
-    width: 389px;
-    height: 388px;
-    top: 52px;
-    left: -15px;
-    border-bottom-left-radius: 95px;
-    border-bottom-right-radius: 145px;
-  }
-
-  .hero-image-wrap::before {
-    width: 368px;
-    height: 496px;
+    width: 466px;
+    height: 380px;
   }
 
   .hero-hashtag-list {
@@ -307,6 +271,7 @@
     justify-content: center;
     align-items: center;
     gap: 75px;
+    margin-bottom: 8px;
   }
 
   .hero-title {
@@ -334,22 +299,12 @@
   }
 
   .hero-image-wrap {
-    margin-bottom: 50px;
-    margin-left: 0;
+    max-width: 517px;
   }
 
   .hero-image {
-    width: 422px;
-    height: 460px;
-    top: 52px;
-    left: 26px;
-    border-bottom-left-radius: 116px;
-    border-bottom-right-radius: 266px;
-  }
-
-  .hero-image-wrap::before {
-    width: 390px;
-    height: 539px;
+    width: 515px;
+    height: 423px;
   }
 
   .hero-hashtag-list {
@@ -365,29 +320,5 @@
   .hero-hashtag-btn:hover {
     color: var(--main-body-color);
     background-color: var(--white-for-project);
-  }
-
-  .hero-image-wrap {
-    margin-bottom: 16px;
-    margin-left: 41px;
-  }
-
-  .hero-image {
-    object-fit: cover;
-    overflow: hidden;
-    position: relative;
-  }
-
-  .hero-image-wrap::before {
-    position: absolute;
-
-    content: '';
-    display: flex;
-    justify-content: center;
-    width: 219px;
-    height: 294px;
-    background-color: var(--white-for-project);
-    border-radius: 500px;
-    transform: rotate(-104.004deg);
   }
 }

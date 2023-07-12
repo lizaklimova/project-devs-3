@@ -147,37 +147,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-  /* Border transition */
-  .header-menu-item {
-    display: inline-block;
-    vertical-align: middle;
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    position: relative;
-    overflow: hidden;
-  }
-
-  .header-menu-link:before {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 100%;
-    bottom: 0;
-    background-color: var(--accent-green-color);
-    height: 4px;
-    border-radius: 3px;
-    transition-property: right;
-    transition-duration: 1s;
-    transition-timing-function: ease-out;
-  }
-
-  .header-menu-link:hover:before,
-  .header-menu-link:focus:before,
-  .header-menu-link:active:before {
-    right: 0;
-  }
-
   /* Logo rotate animation */
   .logo-link:hover .logo-icon {
     animation-name: header-pulse;

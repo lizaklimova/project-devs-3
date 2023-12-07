@@ -26,12 +26,13 @@
   height: 48px;
   border-radius: 100px;
   opacity: 0.30000001192092896;
-  border: 1px solid rgba(20, 20, 20, 1);
-  transition: border-color var(--transition);
+  border: none;
+  outline: 1px solid rgba(20, 20, 20, 1);
+  transition: outline var(--transition);
 }
 
 .call-input:focus {
-  border-color: var(--orange-button-color);
+  outline: 1px solid var(--orange-button-color);
 }
 
 .call-input::placeholder {

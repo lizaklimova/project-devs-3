@@ -152,8 +152,8 @@
   height: 46px;
   border-radius: 100px;
   background-color: transparent;
-  outline: transparent;
-  border: 1px solid rgba(20, 20, 20, 0.3);
+  border: none;
+  outline: 1px solid rgba(20, 20, 20, 0.3);
   padding-left: 24px;
   padding-right: 30px;
   transition: border var(--transition);
@@ -161,7 +161,7 @@
 
 .modal-input:focus,
 .modal-textarea:focus {
-  border: 3px solid rgba(252, 138, 17, 0.5);
+  outline: 3px solid rgba(252, 138, 17, 0.5);
 }
 
 .modal-textarea {
@@ -293,7 +293,7 @@
 @media screen and (min-width: 1280px) {
   .modal {
     width: 891px;
-    min-height: 911px;
+    height: 911px;
   }
 
   .modal-vegetables-list {
